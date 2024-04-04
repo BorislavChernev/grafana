@@ -28,10 +28,30 @@ export const MegaMenu = React.memo(
     const state = chrome.useState();
 
     // Remove profile + help from tree
-    const navItems = navTree
+    let navItems = navTree
       .filter((item) => item.id !== 'profile' && item.id !== 'help')
       .map((item) => enrichWithInteractionTracking(item, state.megaMenuDocked));
 
+     // Add your new navigation items here
+    const newNavItems = [
+      {
+        id: 'newItem1',
+        text: 'Events',
+        icon: 'gf-logs',
+        url: 'https://dashboard.xdraiv.com/app/wazuh#/manager/?tab=logs',
+      },
+      {
+        id: 'newItem2',
+        text: 'Cases',
+        icon: 'folder-open',
+        url: 'https://staging-iris.xdraiv.com/manage/cases?cid=1',
+      }
+    ];
+
+    // Combine the existing nav items with the new items
+    navItems = [...navItems, ...newNavItems.map(item => enrichWithInteractionTracking(item, state.megaMenuDocked))];
+    
+    
     const activeItem = getActiveItem(navItems, location.pathname);
 
     const handleDockedMenu = () => {

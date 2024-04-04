@@ -1,5 +1,5 @@
 {
-  "title": "Grafana",
+  "title": "XDRAIV",
   "tags": [],
   "timezone": "browser",
   "editable": true,
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "title": "Welcome to Grafana",
+      "title": "Welcome to XDRAIV",
       "height": "210px",
       "collapse": false,
       "editable": true,

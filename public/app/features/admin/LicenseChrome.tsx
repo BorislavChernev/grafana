@@ -56,7 +56,7 @@ export function LicenseChrome({ header, editionNotice, subheader, children }: Pr
           }}
         >
           <img
-            src="public/img/grafana_icon.svg"
+            src="https://cdn.discordapp.com/attachments/969251775569866812/1224100353910509688/XDRAIV-Logo-transparent.png?ex=661c434b&is=6609ce4b&hm=9e3888952fa50ade98aa30416896238aab268b3319362f489222c1827f0f64e7&"
             alt="Grafana"
             width="80px"
             style={{ position: 'absolute', left: '23px', top: '20px' }}
